@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eceae1">
+  <title>开始测试｜文学天气</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="quiz-page">
+  <header class="quiz-header"><a class="brand" href="index.html"><span class="brand-dot"></span>文学天气</a><div class="progress-wrap"><span data-stage-label>寻找气候带</span><div class="progress-track"><i data-progress></i></div><b data-progress-text>1 / 16</b></div><button class="text-button" data-restart hidden>重新测试</button></header>
+  <main class="quiz-shell">
+    <section class="quiz-intro" data-view="intro">
+      <div class="quiz-intro-copy"><p class="kicker">你落在文学里的哪一种天气？</p><h1>先别急着定义自己，<br>让天气慢慢显现。</h1><p>跟随第一感受作出选择，看见你的文学天气、人物气质与人格颜色。</p><button class="button button-dark" data-start>开始测试</button></div>
+<figure class="quiz-intro-poster"><img src="assets/literary-weather-zine-victory.png" alt="写有‘美不是答案，而是一种观看世界的方式’的旧纸印刷质感胜利女神海报"></figure>
+    </section>
+    <section class="question-view" data-view="question" hidden>
+      <div class="question-copy"><p data-question-context></p><h1 data-question></h1></div><div class="answer-list" data-answers></div><button class="back-button" data-back>返回上一题</button>
+    </section>
+    <section class="transition-view" data-view="transition" hidden><p class="kicker">你的气候带已经出现</p><article class="transition-climate-card" data-transition-card><div class="transition-climate-copy"><h1 data-band-name></h1><span data-band-traits></span><p data-band-copy></p></div></article><button class="button button-dark" data-continue>继续寻找具体天气</button></section>
+    <section class="result-view" data-view="result" hidden>
+      <div class="result-summary"><p class="kicker">你的文学天气</p><h1 data-result-weather></h1><p data-result-band></p><div class="result-person"><span>你的文学人物气质，像</span><h2 data-result-character></h2><p data-result-description></p><p class="result-caveat">这不是对你的完整定义，也不代表你会经历人物的命运；你们只是共享了某一种面对世界的方式。</p></div><div class="result-details"><div><small>人格颜色</small><b data-result-color></b><span data-result-hex></span></div><div><small>艺术 ID</small><b data-result-id></b><span data-result-slug></span></div></div></div>
+      <div class="share-area">
+        <canvas width="1080" height="1920" data-card-canvas aria-label="9比16文学天气分享卡预览"></canvas>
+        <div class="share-actions"><button class="button button-dark" data-download>保存 9:16 卡片</button><button class="button button-line" data-restart>再测一次</button></div><p>图片不含 Logo、网址或二维码。</p>
+      </div>
+    </section>
+  </main>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="js/creator.js"></script>
+</body>
+</html>
