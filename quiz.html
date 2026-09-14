@@ -2,35 +2,23 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eceae1">
-  <title>开始测试｜文学天气</title>
+  <title>文学天气测试</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/final.css?v=19">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/final.css?v=19">
 </head>
-<body class="quiz-page">
-  <header class="quiz-header"><a class="brand" href="index.html"><span class="brand-dot"></span>文学天气</a><div class="progress-wrap"><span data-stage-label>寻找气候带</span><div class="progress-track"><i data-progress></i></div><b data-progress-text>1 / 20</b></div><button class="text-button" data-restart hidden>重新测试</button></header>
+<body class="quiz-page quiz-flow-page">
+  <header class="quiz-header"><a class="brand" href="create.html"><span class="brand-dot"></span>文学天气</a><div class="progress-wrap"><span data-stage-label>寻找气候带</span><div class="progress-track"><i data-progress></i></div><b data-progress-text>1 / 20</b></div><button class="text-button" data-restart hidden>重新测试</button></header>
   <main class="quiz-shell">
-    <section class="quiz-intro" data-view="intro">
-      <div class="quiz-intro-copy"><p class="kicker">你落在文学里的哪一种天气？</p><h1>先别急着定义自己，<br>让天气慢慢显现。</h1><p>跟随第一感受作出选择，看见你的文学天气、人物气质与人格颜色。</p><a class="button button-dark" href="quiz.html">开始测试</a></div>
-<figure class="quiz-intro-poster"><img src="assets/literary-weather-zine-victory.png" alt="写有‘美不是答案，而是一种观看世界的方式’的旧纸印刷质感胜利女神海报"></figure>
-    </section>
-    <section class="question-view" data-view="question" hidden>
-      <div class="question-copy"><p data-question-context></p><h1 data-question></h1></div><div class="answer-list" data-answers></div><button class="back-button" data-back>返回上一题</button>
-    </section>
+    <section class="quiz-intro" data-view="intro" hidden><div class="quiz-intro-copy"><button class="button button-dark" data-start>开始测试</button></div></section>
+    <section class="question-view" data-view="question" hidden><div class="question-copy"><p data-question-context></p><h1 data-question></h1></div><div class="answer-list" data-answers></div><button class="back-button" data-back>返回上一题</button></section>
     <section class="transition-view" data-view="transition" hidden><p class="kicker">你的气候带已经出现</p><article class="transition-climate-card" data-transition-card><div class="transition-climate-copy"><h1 data-band-name></h1><span data-band-traits></span><p data-band-copy></p></div></article><button class="button button-dark" data-continue>继续寻找具体天气</button></section>
     <section class="result-view" data-view="result" hidden>
       <div class="result-summary"><div class="result-hero-copy"><p class="kicker">你的文学天气</p><h1 data-result-weather></h1><p class="result-climate-name" data-result-band></p><div class="result-person"><p class="result-narrative" data-result-narrative></p><p class="result-caveat">这是一份文化娱乐侧写，不是心理诊断，也不预言你的经历或命运。</p></div><div class="result-details"><div><small>人格颜色</small><b data-result-color></b><span data-result-hex></span></div><div class="result-weather-stamp"><small>你的天气邮票</small><img data-result-stamp alt="" decoding="async"></div></div></div></div>
       <section class="result-reason" aria-labelledby="reason-title"><div class="result-reason-heading"><div><small>BEHAVIOR TENDENCY MAP</small><h3 id="reason-title">你的行为倾向图谱</h3></div><span>本次答题的六项行为倾向</span></div><div class="result-insight-layout"><div class="radar-wrap"><svg class="personality-radar" data-radar viewBox="0 0 360 300" role="img" aria-labelledby="radar-title radar-desc"><title id="radar-title">行为倾向六维雷达图</title><desc id="radar-desc">展示社交活力、共情关怀、开放想象、计划执行、情绪韧性和独立表达六种行为倾向。</desc></svg><p class="radar-climate" data-radar-climate></p></div><div><div class="reason-grid"><article><small>气候依据</small><b data-band-score></b><p data-band-reason></p></article><article><small>文学落点</small><b class="result-literary-title" data-literary-title></b><p data-literary-reason></p></article></div><details class="alternate-result"><summary>同一气候的另一段文学回声</summary><p data-alternate-copy></p></details></div></div></section>
-      <div class="share-area">
-        <div class="share-heading"><p class="kicker">保存你的文学天气</p><h2>一场天气，一页故事。</h2></div>
-        <figure class="literary-stamp-preview"><canvas width="1080" height="1920" data-card-canvas aria-label="文学天气人物名言卡片预览"></canvas></figure>
-        <button class="button button-dark share-save" data-download>保存完整结果</button>
-        <div class="share-actions"><button class="button button-line" data-restart>再测一次</button></div><p>保存整张结果页，包含天气介绍、人格颜色、天气邮票、雷达图与文学卡片。</p>
-      </div>
+      <div class="share-area"><div class="share-heading"><p class="kicker">保存你的文学天气</p><h2>一场天气，一页故事。</h2></div><figure class="literary-stamp-preview"><canvas width="1080" height="1920" data-card-canvas aria-label="文学天气人物名言卡片预览"></canvas></figure><button class="button button-dark share-save" data-download>保存完整结果</button><div class="share-actions"><button class="button button-line" data-restart>再测一次</button></div><p>保存整张结果页，包含天气介绍、人格颜色、天气邮票、雷达图与文学卡片。</p></div>
     </section>
   </main>
-  <div class="toast" data-toast role="status" aria-live="polite"></div>
-<script src="js/result-export.js?v=1"></script><script src="js/creator.js?v=35"></script>
+  <div class="toast" data-toast role="status" aria-live="polite"></div><script src="js/result-export.js?v=1"></script><script src="js/creator.js?v=35"></script>
 </body>
 </html>
